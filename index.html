@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shit</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="wtf.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div>
+            Calculation Settings
+        </div>
+        <div>
+            Formula Being Used
+        </div>
+        <div>
+            Weights
+        </div>
+    </div>
+    <div id="dataSets">
+
+        <div id="block" class="block" style="display: none;">
+            <div class="data-representation">
+                <div class="data-info">
+                    <div class="container">
+                        <h2 name="setName">Set Name:</h2>
+                    </div>
+                    <div class="container row">
+                        <h4>Select Set:</h4>
+                        <select name="selectSet" id="selectSet">
+                            <option value="none">None</option>
+
+                        </select>
+                    </div>
+                    <div class="container">
+                        <h2 name="removeSet" id="removeSet">X</h2>
+                    </div>
+                </div>
+                <div class="container" name="sleepData">
+                    <h3 name="sleepDuration">Sleep Duration: </h3>
+                    <h3>Sleep Stages</h3>
+                    <div class="sleep-stages-points">
+                        <div>
+                            <div style="background-color: orange;"></div>
+                            <p>Awake</p>
+                            <p name="awake"></p>
+                            <p class="smaller">(4% - 10%)</p>
+                        </div>
+                        <div>
+                            <div style="background-color: rgb(71, 227, 255);"></div>
+                            <p>REM</p>
+                            <p name="rem"></p>
+                            <p class="smaller">(19% - 27%)</p>
+                        </div>
+                        <div>
+                            <div style="background-color: rgb(71, 120, 255);"></div>
+                            <p>Light</p>
+                            <p name="light"></p>
+                            <p class="smaller">(45% - 60%)</p>
+                        </div>
+                        <div>
+                            <div style="background-color: rgb(44, 72, 151);"></div>
+                            <p>Deep</p>
+                            <p name="deep"></p>
+                            <p class="smaller">(10% - 12%)</p>
+                        </div>
+                    </div>
+                    <div name="sleepStages" class="sleep-stages">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="analysis">
+                <div class="results">
+                    <h4>Results</h4>
+                    <div class="calculations">
+                        <div name="stages">
+                            <p>Sleep Stages</p>
+                            <div class="weight-bars">
+                                <div class="descriptions">
+                                    <div>
+                                        <p class="bold">Stage Name: </p>
+                                    </div>
+                                    <div>
+                                        <p>Awake: </p>
+                                    </div>
+                                    <div>
+                                        <p>REM: </p>
+                                    </div>
+                                    <div>
+                                        <p>Light: </p>
+                                    </div>
+                                    <div>
+                                        <p>Deep: </p>
+                                    </div>
+                                </div>
+
+                                <div class="bars">
+                                    <div>
+                                        <div class="bar-segments bold">
+                                            <p>Too Little</p>
+                                            <p>-</p>
+                                            <p>Too Much</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div name="awake" class="bar-segments">
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div name="bAwake" class="data-bar" style="background-color: orange;"></div>
+                                    </div>
+                                    <div>
+                                        <div name="rem" class="bar-segments">
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div name="bRem" class="data-bar" style="background-color: rgb(71, 227, 255);"></div>
+                                    </div>
+                                    <div>
+                                        <div name="light" class="bar-segments">
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div name="bLight" class="data-bar" style="background-color: rgb(71, 120, 255);"></div>
+                                    </div>
+                                    <div>
+                                        <div name="deep" class="bar-segments">
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div name="bDeep" class="data-bar" style="background-color: rgb(44, 72, 151);"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div name="calculated">
+                            <p>Scores</p>
+                            <div class="points">
+                                <p class="bold">Factor Name: </p>
+                                <div class="bold">
+                                    <p>Calculated:</p>
+                                    <p>Target:</p>
+                                </div>
+                                <p>Physical Recovery: </p>
+                                <div>
+                                    <p name="cPR"></p>
+                                    <p name="tPR"></p>
+                                </div>
+                                <p>Restfulness: </p>
+                                <div>
+                                    <p name="cRST"></p>
+                                    <p name="tRST"></p>
+                                </div>
+                                <p>Mental Recovery: </p>
+                                <div>
+                                    <p name="cMR"></p>
+                                    <p name="tMR"></p>
+                                </div>
+                                <p>Sleep Cycles: </p>
+                                <div>
+                                    <p name="cCYL"></p>
+                                    <p name="tCYL"></p>
+                                </div>
+                                <p>Final Score: </p>
+                                <div>
+                                    <p name="cSC"></p>
+                                    <p name="tSC"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div name="accuracy" class="accuracy">
+                            <p>Accuracy</p>
+
+                            <div class="accuracy-bars">
+                                <div>
+                                    <div name="PR"></div>
+                                </div>
+                                <div>
+                                    <div name="RST"></div>
+                                </div>
+                                <div>
+                                    <div name="MR"></div>
+                                </div>
+                                <div>
+                                    <div name="CYL"></div>
+                                </div>
+                                <div>
+                                    <div name="SC"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                
+        </div>
+
+    </div>
+
+    <button id="addDataSet">Add Data Set</button>
+
+
+
+    
+
+
+
+</body>
+</html>

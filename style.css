@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+.header{
+    display: flex;
+    border-bottom: solid 2px rgb(197, 197, 197);
+}
+
+.header > div{
+    flex: 1;
+    height: 20px;
+    background-color: rgb(245, 245, 245);
+    border-left: solid 1px rgb(197, 197, 197);
+
+    padding: 5px 15px;
+}
+
+
+
+
+
+.block{
+    background-color: rgb(245, 245, 245);
+    border-top: solid 1px rgb(197, 197, 197);
+    border-bottom: solid 1px rgb(197, 197, 197);
+
+
+    display: flex;
+}
+
+.analysis{
+    border-left: solid 1px rgb(197, 197, 197);
+    flex-grow: 0;  
+    flex-shrink: 0;
+    flex-basis: 700px;
+}
+
+.header > :last-child{
+    flex-grow: 0;  
+    flex-shrink: 0;
+    flex-basis: 670px;
+
+}
+
+
+.results, .data-representation{
+    padding: 5px 15px;
+}
+
+.data-representation{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 10px;
+}
+.data-representation .data-info{
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+.data-representation .data-info > :first-child{
+    margin-right: auto;
+}
+
+.data-representation .container{
+    background-color: white;
+    padding: 5px 15px;
+    border: solid 1px rgb(197, 197, 197);
+    border-radius: 10px;
+}
+.container[name="sleepData"]{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.data-representation .container.row{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.data-representation {
+    flex: 1;
+}
+
+.sleep-stages-points{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sleep-stages-points > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.sleep-stages-points > div > div{
+    width: 20px;
+    height: 20px;
+}
+
+.sleep-stages-points .smaller{
+    font-size: x-small;
+    font-weight: bold;
+    color: rgb(141, 141, 141);
+}
+
+.sleep-stages{
+    display: flex;
+    background-color: rgb(223, 223, 223);
+    border: solid 1px rgb(177, 177, 177);
+    height: 20px;
+
+}
+
+.results{
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+.calculations{
+    display: flex;
+    gap: 5px;
+}
+
+.calculations > div{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px rgb(197, 197, 197);
+
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calculations div[name="accuracy"]{
+    flex-shrink: 2;
+}
+.calculations div[name="stages"]{
+    flex-shrink: 0.9;
+}
+
+.calculations > div >p{
+    padding-bottom: 5px;
+}
+
+
+.points{
+    text-align: left;
+    font-size: small;
+    gap: 5px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+}
+
+.points .bold{
+    font-weight: bold;
+}
+
+
+.points > div{
+    display:  flex;
+    justify-content: space-around;
+}
+
+.accuracy-bars{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.accuracy-bars > div{
+    height: 11px;
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    border: solid 1px rgb(177, 177, 177);
+    
+}
+
+.accuracy-bars > div > div{
+    background-color: rgb(74, 212, 74);
+
+    height: 100%;
+
+}
+
+
+.weight-bars{
+    display: flex;
+    gap: 10px;
+    font-size: small;
+}
+
+.weight-bars .bars{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+.weight-bars .descriptions{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+.weight-bars .descriptions > div{
+    min-height: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.weight-bars .bars > div{
+    display: flex;
+    position: relative;
+}
+.weight-bars .bars .bar-segments{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+
+    min-height: 17px;
+
+    background-color: rgb(223, 223, 223);
+    border: solid 1px rgb(177, 177, 177);
+}
+
+.weight-bars .bars .line{
+    height: 100%;
+    width: 1px;
+
+    background-color: rgb(177, 177, 177);
+}
+
+.weight-bars .bars .data-bar{
+    position: absolute;
+    right: calc(50% - 10px);
+    top: 15%;
+    height: 70%;
+    width: 20px;
+}
+
+
+
+
+.weight-bars .bold{
+    font-weight: bold;
+    background-color: transparent !important;
+    border: 0 !important;
+}
