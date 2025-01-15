@@ -22,14 +22,10 @@ Promise.all([
     fetchJSONFile('set_5.json'),
     fetchJSONFile('set_6.json'),
     fetchJSONFile('set_7.json'),
-    fetchJSONFile('set_8.json'),
-    fetchJSONFile('set_9.json'),
     fetchJSONFile('set_8.json')
 ]).then(([set1, set2, set3, set4, set5, set6, set7, set8]) => {
 
     sets = {set1, set2, set3, set4, set5, set6, set7, set8}; 
-
-
 }).catch(error => {
     console.error('Error fetching one or more JSON files:', error);
 });
